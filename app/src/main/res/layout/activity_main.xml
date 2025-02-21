@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-  ConstraintLayout을 최상위로 사용하며,
-  앱 제목, 전체 사용 설명, 입력란(EditText) 및 결과 출력(TextView)은 ScrollView 밖에 항상 보입니다.
-  ScrollView 안에는 각 문제 항목이 수평 LinearLayout으로 구성되어 있으며,
-  각 항목은 문제 제목(TextView)과 버튼, 그리고 버튼 옆에 설명(TextView)이 배치됩니다.
--->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- 앱 제목 -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="안드로이드 let 함수 연습 앱"
+        android:text="@string/let_title"
         android:textSize="20sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -25,35 +18,32 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_margin="16dp"/>
 
-    <!-- 전체 사용 설명 -->
     <TextView
         android:id="@+id/tvInstructions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="아래의 입력란에 문자열 또는 숫자를 입력하세요."
+        android:text="@string/let_instructions"
         android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginHorizontal="16dp"/>
 
-    <!-- 사용자 입력란 -->
     <EditText
         android:id="@+id/editText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="문자열 또는 숫자를 입력하세요."
+        android:hint="@string/explain_edit_text"
         app:layout_constraintTop_toBottomOf="@id/tvInstructions"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_margin="16dp"/>
 
-    <!-- 결과 출력 영역 -->
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="결과가 여기에 표시됩니다."
+        android:text="@string/result_output"
         android:textSize="18sp"
         app:layout_constraintTop_toBottomOf="@id/editText"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -61,7 +51,6 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- ScrollView: 문제 목록을 감싸서 스크롤 가능하도록 함 -->
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="0dp"
@@ -79,21 +68,18 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- 문제 1 항목 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingBottom="16dp">
-                <!-- 문제 제목 -->
                 <TextView
                     android:id="@+id/tvLabelProblem1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="문제 1: 문자열 길이 계산"
+                    android:text="@string/title_length"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
-                <!-- 버튼과 설명을 수평 배치 (상단 정렬) -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -104,14 +90,14 @@
                         android:id="@+id/btnProblem1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="@string/button"/>
                     <TextView
                         android:id="@+id/tvDescProblem1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="설명: 입력한 문자열의 길이를 계산하여 토스트 메시지로 출력"
+                        android:text="@string/explanation_length"
                         android:layout_marginStart="8dp"
                         android:textSize="14sp"/>
                 </LinearLayout>
@@ -127,7 +113,7 @@
                     android:id="@+id/tvLabelProblem2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="문제 2: 문자열 트림 (원본 vs 결과)"
+                    android:text="@string/title_trim"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
                 <LinearLayout
@@ -140,14 +126,14 @@
                         android:id="@+id/btnProblem2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="@string/button"/>
                     <TextView
                         android:id="@+id/tvDescProblem2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="설명: 입력한 문자열의 앞뒤 공백을 제거한 결과를 원본과 함께 출력"
+                        android:text="@string/explanation_trim"
                         android:layout_marginStart="8dp"
                         android:textSize="14sp"/>
                 </LinearLayout>
@@ -163,7 +149,7 @@
                     android:id="@+id/tvLabelProblem3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="문제 3: 숫자 제곱 계산"
+                    android:text="@string/title_square"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
                 <LinearLayout
@@ -176,14 +162,14 @@
                         android:id="@+id/btnProblem3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="@string/button"/>
                     <TextView
                         android:id="@+id/tvDescProblem3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="설명: 입력한 숫자의 제곱 계산 결과를 출력"
+                        android:text="@string/explanation_square"
                         android:layout_marginStart="8dp"
                         android:textSize="14sp"/>
                 </LinearLayout>
@@ -199,7 +185,7 @@
                     android:id="@+id/tvLabelProblem4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="문제 4: 버튼 텍스트 뒤집기"
+                    android:text="@string/title_flip"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
                 <LinearLayout
@@ -212,14 +198,14 @@
                         android:id="@+id/btnProblem4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="@string/button"/>
                     <TextView
                         android:id="@+id/tvDescProblem4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="설명: 버튼의 텍스트를 뒤집어 출력"
+                        android:text="@string/explanation_flip"
                         android:layout_marginStart="8dp"
                         android:textSize="14sp"/>
                 </LinearLayout>
@@ -235,7 +221,7 @@
                     android:id="@+id/tvLabelProblem5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="문제 5: 숫자에 10 더하기"
+                    android:text="@string/title_add_ten"
                     android:textSize="16sp"
                     android:textStyle="bold"/>
                 <LinearLayout
@@ -248,14 +234,14 @@
                         android:id="@+id/btnProblem5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Button"/>
+                        android:text="@string/button"/>
                     <TextView
                         android:id="@+id/tvDescProblem5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="top"
-                        android:text="설명: 입력한 숫자에 10을 더한 결과를 출력"
+                        android:text="@string/explanation_add_ten"
                         android:layout_marginStart="8dp"
                         android:textSize="14sp"/>
                 </LinearLayout>

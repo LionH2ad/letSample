@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">letSample</string>
+
+    <string name="let_title">안드로이드 let 함수 연습 앱</string>
+    <string name="let_instructions">아래의 입력란에 문자열 또는 숫자를 입력하세요.</string>
+    <string name="explain_edit_text">문자열 또는 숫자를 입력하세요.</string>
+    <string name="result_output">결과가 여기에 표시됩니다.</string>
+
+    <string name="button">Button</string>
+
+    <string name="title_length">문제 1: 문자열 길이 계산</string>
+    <string name="title_trim">문제 2: 문자열 트림 (원본 vs 결과)</string>
+    <string name="title_square">문제 3: 숫자 제곱 계산</string>
+    <string name="title_flip">문제 4: 버튼 텍스트 뒤집기</string>
+    <string name="title_add_ten">문제 5: 숫자에 10 더하기</string>
+
+    <string name="explanation_length">설명: 입력한 문자열의 길이를 계산하여 토스트 메시지로 출력</string>
+    <string name="explanation_trim">설명: 입력한 문자열의 앞뒤 공백을 제거한 결과를 원본과 함께 출력</string>
+    <string name="explanation_square">설명: 입력한 숫자의 제곱 계산 결과를 출력</string>
+    <string name="explanation_flip">설명: 버튼의 텍스트를 뒤집어 출력</string>
+    <string name="explanation_add_ten">설명: 입력한 숫자에 10을 더한 결과를 출력</string>
 </resources>
